@@ -1,0 +1,62 @@
+### GET request to example server
+
+###
+GET http://localhost:8080/user
+Content-Type: application/json
+
+###
+POST localhost:8080/user
+Content-Type: application/json
+
+{
+  "name": "Usman",
+  "email": "usman2003@gmail.com",
+  "password": "root123"
+}
+###
+PUT localhost:8080/user/4
+Content-Type: application/json
+
+{
+  "name": "Amin",
+  "email": "amin@example.com",
+  "password": "newpassword123"
+}
+
+###
+DELETE localhost:8080/user/4
+Content-Type: application/json
+
+###
+GET http://localhost:8080/card
+Content-Type: application/json
+
+###
+POST localhost:8080/card
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "card": {
+    "number": 8600,
+    "password": "abc123",
+    "expireDate": "12/36"
+  }
+}
+###
+
+PUT localhost:8080/card/1
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "card": {
+    "number": 111111,
+    "password": "abc111",
+    "expireDate": "12/27"
+  }
+}
+###
+
+DELETE localhost:8080/card/52
+Content-Type: application/json
