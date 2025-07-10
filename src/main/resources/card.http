@@ -1,0 +1,61 @@
+GET http://localhost:8080/card/
+Content-Type: application/json
+
+###
+GET http://localhost:8080/card/my
+Content-Type: application/json
+#Authorization: dGpvbmliZWsyMDAxQGdtYWlsLmNvbQ== //Jonibek
+Authorization: anQwMDAwOTk3NEBnbWFpbC5jb20= //Ali
+###
+POST localhost:8080/card
+Content-Type: application/json
+#Authorization: dGpvbmliZWsyMDAxQGdtYWlsLmNvbQ== //Jonibek
+Authorization: anQwMDAwOTk3NEBnbWFpbC5jb20= //Ali
+
+{
+  "userId": 3,
+  "card": {
+    "number": 5614,
+    "password": "abc123",
+    "cardType": "UZCARD",
+    "balance": 100000,
+    "expireDate": "12/36"
+  }
+}
+###
+
+
+###
+
+POST http://localhost:8080/card/transfer
+Content-Type: application/json
+Authorization: dGpvbmliZWsyMDAxQGdtYWlsLmNvbQ== //Jonibek
+
+{
+  "fromCardNumber": 8600,
+  "toCardNumber": 5614,
+  "senderCode": "abc123",
+  "amount": 20000
+}
+
+
+###
+
+
+###
+PUT localhost:8080/card/1
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "card": {
+    "number": 111111,
+    "password": "abc111",
+    "expireDate": "12/27"
+  }
+}
+###
+
+DELETE localhost:8080/card/52
+Content-Type: application/json
+

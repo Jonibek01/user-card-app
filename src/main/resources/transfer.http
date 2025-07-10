@@ -1,0 +1,16 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+
+POST http://localhost:8080/card/transfer
+Content-Type: application/json
+Authorization: dGpvbmliZWsyMDAxQGdtYWlsLmNvbQ== //Jonibek
+
+{
+  "fromCardNumber": 8600,
+  "toCardNumber": 5614,
+  "senderCode": "123",
+  "amount": 20000
+}
